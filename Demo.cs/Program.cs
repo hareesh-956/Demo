@@ -4,17 +4,23 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            Random h = new Random();
-            int hari = h.Next(0,2);
-           // Console.WriteLine(hari);
-            if (hari == 1)
+            Console.Write("Enter the value of N: ");
+            int N = Convert.ToInt32(Console.ReadLine());
+
+            if (N != 0)
             {
-                Console.WriteLine("Emp is present");
+                double harmonic = 0.0;
+
+                for (int i = 1; i <= N; i++)
+                {
+                    harmonic += 1.0 / i;
+                }
+
+                Console.WriteLine("The " + N + "th harmonic value is: " + harmonic);
             }
             else
             {
-                Console.WriteLine("emp is absent");
+                Console.WriteLine("Invalid input! N must be non-zero.");
             }
         }
     }
